@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mvc-list mini</title>
+</head>
+<style>
+  #list-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .list-item {
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 36px;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  #list-container ul{
+    list-style: none;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+  }
+
+  .author .author_img {
+    max-width: 60px;
+  }
+
+  .author .author_name {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .author .desc h4 {
+    margin: 16px 0;
+  }
+
+  .actions-area {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+</style>
+<body>
+  <div id="list-container">
+    <h1 class="title">mvc-list mini</h1>
+    <ul></ul>
+  </div>
+  <div class="actions-area">
+    <button class="add-authors">新拉取10条</button>
+  </div>
+</body>
+
+<script src="./src/list.js"></script>
+</html>

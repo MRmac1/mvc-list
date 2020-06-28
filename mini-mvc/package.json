@@ -1,0 +1,16 @@
+{
+  "name": "mini",
+  "version": "1.0.0",
+  "description": "列表下拉加载实例",
+  "main": "list.js",
+  "dependencies": {
+    "handlebars": "^4.7.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "http-server"
+  },
+  "keywords": [],
+  "author": "darrenzhou <darren.zjc@alibaba-inc.com> (xxx.com)",
+  "license": "ISC"
+}
