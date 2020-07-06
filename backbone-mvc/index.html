@@ -8,11 +8,23 @@
   <link rel="stylesheet" href="http://todomvc.com/examples/backbone/node_modules/todomvc-app-css/index.css">
 </head>
 <body>
+  <section class="todoapp">
+    <header class="header">
+      <h1>todos</h1>
+      <input class="new-todo" placeholder="What needs to be done?" autofocus="">
+    </header>
+    <!-- 显示 list 信息 -->
+    <section class="main" style="display: none;"></section>
+    <footer class="footer" style="display: none;"></footer>
+  </section>
 
-  <header class="header">
-    <h1>todos</h1>
-    <input class="new-todo" placeholder="What needs to be done?" autofocus="">
-  </header>
+  <footer class="info">
+    <p>Double-click to edit a todo</p>
+    <p>Written by <a href="https://github.com/addyosmani">Addy Osmani</a></p>
+    <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+  </footer>
+
+  
 
 </body>
 <script src="./src/index.js"></script>
