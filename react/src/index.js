@@ -22,10 +22,15 @@ class App extends Component {
     this.tickId = null
   }
 
-
   render() {
-    return <div>
+    return <div onClick={this.handleClick}>
       It is {this.state.date.toLocaleTimeString()}
+      <ul>
+        {
+          [1, 2].map((item) => <li key={item}>{item}</li>)
+        }
+      </ul>
+      <input value={'123'} />
     </div>
   }
 }
