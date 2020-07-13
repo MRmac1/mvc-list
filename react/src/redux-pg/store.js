@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 
 const reducer = (state = { count: 0 }, action) => {
   switch (action.type) {
@@ -11,10 +11,20 @@ const reducer = (state = { count: 0 }, action) => {
   }
 }
 
-// store.subscribe(() => console.log('store', store.getState()))
-// store.dispatch({ type: 'add' })
-// store.dispatch({ type: 'add' })
-// store.dispatch({ type: 'minus' })
+// 增加中间件
+function logger(store) {
+  return function(next) {
+    return function (action) {
+      console.log('dispatch', action);
+      const result = next(action);
+      console.log('next state', store.getState());
+      return result;
+    }
+  }
+}
 
+// thunk promise
+const thunk = store => next => action => typeof action === 'function' ? action(store.dispatch, store.getState) : next(action);
 
-export default createStore(reducer);
+export default createStore(reducer, applyMiddleware(thunk, logger));
+// export default createStore(reducer);
